@@ -1,11 +1,13 @@
 const initialState = {
-    id:1,
-    title:'beer'
+  id:null,
+  title:'nothing'
 }
 
 export default (state = initialState, action) => {
-    switch (action.type) {
-      default:
-        return state;
-    }
+  switch (action.type) {
+    case 'GET_EVENT_SUCCESS':
+      return action.event;
+    default:
+      return state;
   }
+}

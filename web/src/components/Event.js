@@ -1,16 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { getEvent } from '../actions/event';
 
-const Event = ({event}) => {
-  console.log(event)
+class Event extends React.Component {
 
-  return (
-    <div className="left-hand-side events-list">
-      <h2 className="calender-header">Event</h2>  
-        {event.id ? event.title : null}    
-    </div>
+  componentWillMount(){
+    this.props.getEvent(this.props.match.params.id,this.props.history)
+  }
+
+  render () {
+    return (
+      <div className="left-hand-side events-list">
+        <h2 className="calender-header">Event</h2>  
+          {this.props.event.id ? this.props.event.title : null}    
+      </div>
     );
   }
+}
 
 const mapStateToProps = (state) => {
   return ({
@@ -18,4 +24,4 @@ const mapStateToProps = (state) => {
     })
 }
 
-export default connect(mapStateToProps, {})(Event);
+export default connect(mapStateToProps, {getEvent})(Event);
