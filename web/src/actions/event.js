@@ -20,3 +20,11 @@ export const setEvent = event => {
     event,
   }
 }
+
+export const closeEvent = (beer,history) => {
+  history.push(`/`)
+  return {
+    type: 'CLOSE_EVENT',
+    beer,
+  }
+}
