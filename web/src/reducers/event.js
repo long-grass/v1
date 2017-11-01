@@ -1,6 +1,5 @@
 const initialState = {
-  id:null,
-  title:'nothing'
+ 
 }
 
 export default (state = initialState, action) => {

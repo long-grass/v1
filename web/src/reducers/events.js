@@ -1,7 +1,4 @@
-const initialState = [{
-    id:1,
-    title:'beer'
-}]
+const initialState = []
 
 export default (state = initialState, action) => {
   switch (action.type) {

@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getEvents } from '../actions/events';
 import ListItem from './ListItem/ListItem';
-
+import styles from './Calendar.css';
+const classNames = require('classnames');
 
 class Calendar extends React.Component  {
   
@@ -10,9 +11,11 @@ class Calendar extends React.Component  {
     this.props.getEvents()
   }
   render (){ 
+
+    const leftHand = classNames(styles.leftHandSide, styles.eventsList)
     return (
-      <div className="left-hand-side events-list">
-        <h2 className="calender-header">Events</h2>
+      <div className={leftHand}>
+        <h2 className={styles.calenderHeader}>Events</h2>
         <ul>    
           {this.props.events ? 
             this.props.events.map((event, index) => 

@@ -1,0 +1,25 @@
+
+
+.leftHandSide {
+    width: 90%;
+    float: left;
+}
+
+.eventsList {
+    margin-bottom: 5em;
+}
+
+.calenderHeader {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    line-height: 1;
+}
+
+@media screen and (max-width: 900px){
+    .leftHandSide {
+        width: 100%;  
+    }
+  }
