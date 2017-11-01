@@ -11,12 +11,12 @@ import Event from './Event';
 import Calendar from './Calendar.js'
 
 const App = (props) => {
-   
+
   const rightHandState = ''
 
   return (
     <Router>
-      <div className="App">  
+      <div className="App"> 
         <div className="site-wrapper">
           <Route component={Calendar}/>
           <div id="right-hand-side" className={rightHandState}>
