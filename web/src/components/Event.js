@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { getEvent } from '../actions/event';
 import { EventShow} from '../components/EventShow.js';
 
+import styles from './Event.css'
+
 class Event extends React.Component {
 
   componentWillMount(){

@@ -6,7 +6,7 @@ export const getEvent = (eventId, history) => {
     .then(response => response.json())
     .then(event => {     
       event.openState = "show-it"
-      event.eventColourScheme = `${event.kind.toLowerCase()}-background`
+      event.eventColourScheme = `${event.kind.toLowerCase()}Background`
       history.push(`/events/${eventId}`)
       return dispatch(setEvent(event))
     })

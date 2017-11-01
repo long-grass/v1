@@ -7,26 +7,32 @@ import {
 } from 'react-router-dom';
 const classNames = require('classnames');
 
+import indexStyle from  '../css/index.css'
+import eventStyle from './Event.css'
+
 import Event from './Event';
 import Calendar from './Calendar.js'
 
 const App = (props) => {
 
-  const rightHandState = ''
+  const rightHandStyle =  classNames(eventStyle.eventInfo, 
+    eventStyle.primaryColour, 
+    eventStyle[props.event.openState],
+    eventStyle[props.event.eventColourScheme]
+  );
+  
 
   return (
     <Router>
-      <div className="App"> 
-        <div className="site-wrapper">
+        <div className={indexStyle.siteWrapper}>
           <Route component={Calendar}/>
-          <div id="right-hand-side" className={rightHandState}>
+          <div id="right-hand-side" className={rightHandStyle}>
             <Switch>
               <Route exact path="/" />
               <Route path="/events/:id" component={Event} />
             </Switch>
           </div>
         </div>
-      </div>
     </Router>
   );
 }

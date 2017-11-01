@@ -1,0 +1,99 @@
+.beersBackground {
+    background-color:#dbb561;
+    /* background: url(../assets/images/beer-icon-background.png) no-repeat; */
+}
+
+.cocktailsBackground {
+    background-color:#93e5e1;
+    /* background: url(../assets/images/cocktail-icon-background.png) no-repeat; */
+}
+
+.milkshakesBackground {
+    background-color:#fadbcb;
+    /* background: url(../assetsç/images/milkshake-icon-background.png) no-repeat; */
+}
+
+.coffeesBackground {
+    background-color:#d7ccc8;
+    /* background: url(../assets/images/coffee-icon-background.png) no-repeat; */
+}
+
+#right-hand-side{
+    color:#0f1b35
+}
+
+.eventInfo {
+    z-index: 300;
+    padding: 5%;
+    height: 100%;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition-duration: 1.2s;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.show-it {
+    transform: translate(0px) !important;
+    transition-duration: 1.2s;
+}
+ 
+
+.eventPrimaryColor {
+    color: #fff;
+}
+.event-background-color, .filter-overlay-bg {
+    background: rgb(252,86,64);
+}
+
+.event-colour-one {
+    background:rgb(252,86,64);
+}
+
+
+
+.event-colour-two {
+    background:pink;
+}
+
+.event-colour-three {
+    background:#88c369;
+}
+
+.event-colour-four {
+    background:#6495ED;
+}
+
+.event-colour-seven {
+    background:‎#876ec3 !important;
+}
+
+.event-colour-five {
+    background:#876ec3 !important;
+}
+
+.event-colour-six {
+    background:#4682b4;
+}
+
+
+@media (min-width: 750px){
+    .eventInfo {
+        /*width: 40%;*/
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+  .eventInfo {
+     width: 100%;
+     padding: 60px;
+  }
+}
