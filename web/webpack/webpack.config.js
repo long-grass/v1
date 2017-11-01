@@ -1,0 +1,41 @@
+module.exports = options => {
+  return {
+    entry: './src/index.js',
+    output: {
+      filename: 'bundle.js',
+    },
+    devtool: 'source-map',
+    devServer: {
+       port: 3000,
+       host: '0.0.0.0',
+      disableHostCheck: true,
+       historyApiFallback: {
+         rewrites: [{
+          from: /./,
+          to: '/src/index.html'
+         }]
+       },
+    },
+    module: {
+      rules: [
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+        }, {
+            test: /\.css$/,
+            loader: 'style-loader!css-loader!sass-loader',
+        }, {
+            test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+            loader: 'file-loader'
+        }, {
+            test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
+            loader: 'file-loader',
+            query: {
+                name: '[name].[ext]?[hash]'
+            }
+        },
+    ],
+    },
+  }
+}
