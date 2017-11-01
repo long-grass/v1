@@ -18373,3 +18373,426 @@ Processing by EventsController#show as */*
   [1m[36mEventComment Load (0.3ms)[0m  [1mSELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1[0m  [["event_id", 8]]
   [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1  [["event_id", 8]]
 Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:15:15 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (2.8ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 209ms (Views: 0.2ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/parties/8" for 172.19.0.7 at 2017-11-01 16:15:16 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (2.2ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 8]]
+  [1m[35mEventComment Load (0.9ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 8]]
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 8]]
+Completed 200 OK in 291ms (Views: 0.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:15:22 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.6ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/parties/8" for 172.19.0.7 at 2017-11-01 16:15:22 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 8]]
+  [1m[35mEventComment Load (0.6ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 8]]
+  [1m[36mLocation Load (2.5ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 8]]
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:15:32 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.6ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.8ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:15:32 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.7ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.7ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.9ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:16:39 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:16:39 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:16:40 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.9ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.6ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:16:50 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:16:50 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 42ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:16:50 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (1.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.5ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:17:25 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 42ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:17:26 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:17:26 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.7ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.5ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (1.1ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:20:11 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.1ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 205ms (Views: 0.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:20:12 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.7ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 246ms (Views: 0.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:20:16 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.3ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:20:19 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:20:31 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.8ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 126ms (Views: 0.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:20:31 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.6ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.9ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:20:32 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 49ms (Views: 0.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:20:32 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (1.5ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.7ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (1.4ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:21:50 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 229ms (Views: 0.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:21:52 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.6ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.9ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 265ms (Views: 0.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:22:03 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:22:34 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.7ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:22:34 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (6.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 109ms (Views: 0.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:22:35 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (1.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.9ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.6ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (1.3ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/parties" for 172.19.0.7 at 2017-11-01 16:55:25 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as */*
+  [1m[35mEvent Load (1.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/parties/10" for 172.19.0.7 at 2017-11-01 16:55:25 +0000
+Cannot render console from 172.19.0.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGuest Load (0.8ms)[0m  [1mSELECT "guests".* FROM "guests" WHERE "guests"."event_id" = $1[0m  [["event_id", 10]]
+  [1m[35mEventComment Load (0.7ms)[0m  SELECT "event_comments".* FROM "event_comments" WHERE "event_comments"."event_id" = $1  [["event_id", 10]]
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT  "locations".* FROM "locations" INNER JOIN "event_locations" ON "locations"."id" = "event_locations"."location_id" WHERE "event_locations"."event_id" = $1 LIMIT 1[0m  [["event_id", 10]]
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 3.8ms)

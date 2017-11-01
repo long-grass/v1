@@ -6,7 +6,9 @@ import CloseIt from './EventDetail/CloseIt.js';
 class Event extends React.Component {
 
   componentWillMount(){
-    this.props.getEvent(this.props.match.params.id,this.props.history)
+    const event = this.props.match.params.id
+    const history = this.props.history
+    this.props.getEvent(event,history)
   }
 
   render () {

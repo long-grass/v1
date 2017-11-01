@@ -24,7 +24,7 @@ module.exports = options => {
             exclude: /node_modules/,
         }, {
             test: /\.css$/,
-            loader: 'style-loader!css-loader!sass-loader',
+            loader: ['style-loader','css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]','sass-loader'],
         }, {
             test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
             loader: 'file-loader'

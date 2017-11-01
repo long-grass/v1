@@ -1,0 +1,45 @@
+
+.calender-event-item-date {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    width: 90px;
+}
+
+.calender-event-item-title {
+    padding-left: 90px;
+    display: block;
+    position: relative;
+}
+
+.calender-event-item-inner {
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+.bob{
+    border:'2px solid red'
+}
+
+
+ .meta-data {
+    font: 1rem/1.25 "Lucida Console",Monaco,monospace;
+}
+
+.calender-event a {
+    color: #000;
+    display: block;
+    position: relative;
+}
+
+.calender-event a:hover {
+    color: #003da6;
+}
+
+.calender-event-item-title h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
