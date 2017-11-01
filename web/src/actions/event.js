@@ -4,7 +4,7 @@ export const getEvent = (eventId, history) => {
   return dispatch => {
     return fetch(`${API_URL}/parties/${eventId}`)
     .then(response => response.json())
-    .then(event => {      
+    .then(event => {     
       event.openState = "show-it"
       event.eventColourScheme = `${event.kind.toLowerCase()}-background`
       history.push(`/events/${eventId}`)

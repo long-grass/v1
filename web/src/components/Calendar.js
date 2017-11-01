@@ -19,6 +19,7 @@ class Calendar extends React.Component  {
               <ListItem
                 event={event}
                 key={index}
+                history={this.props.history}
           />
           ) : null}
         </ul>       
