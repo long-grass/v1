@@ -14,6 +14,9 @@ const SectionOne = ({event}) => {
     <p>{event.kind}</p>
     <p>{date}</p>
     <p>{event.guests.length} guests</p>
+    <p>at {event.location.name}</p>
+    <p>host is  {event.host.name}</p>
+    <p>{event.event_comments.length} comments</p>
     </div>
   );
 }

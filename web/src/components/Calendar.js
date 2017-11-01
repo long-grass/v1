@@ -12,13 +12,16 @@ class Calendar extends React.Component  {
   }
   render (){ 
 
+    const events = this.props.events.sort((a,b) => a.time < b.time ? -1 : 1)
+    
+
     const leftHand = classNames(styles.leftHandSide, styles.eventsList)
     return (
       <div className={leftHand}>
         <h2 className={styles.calenderHeader}>Events</h2>
         <ul>    
           {this.props.events ? 
-            this.props.events.map((event, index) => 
+            events.map((event, index) => 
               <ListItem
                 event={event}
                 key={index}
