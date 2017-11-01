@@ -1,0 +1,2 @@
+class Cori < ApplicationRecord
+end

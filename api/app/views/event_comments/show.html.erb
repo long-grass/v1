@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @event_comment.timestamp %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @event_comment.message %>
+</p>
+
+<%= link_to 'Edit', edit_event_comment_path(@event_comment) %> |
+<%= link_to 'Back', event_comments_path %>

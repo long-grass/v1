@@ -1,0 +1,22 @@
+<%= form_with(model: cori, local: true) do |form| %>
+  <% if cori.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cori.errors.count, "error") %> prohibited this cori from being saved:</h2>
+
+      <ul>
+      <% cori.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :when %>
+    <%= form.date_select :when, id: :cori_when %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

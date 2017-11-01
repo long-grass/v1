@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Event Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_comments.each do |event_comment| %>
+      <tr>
+        <td><%= event_comment.timestamp %></td>
+        <td><%= event_comment.message %></td>
+        <td><%= link_to 'Show', event_comment %></td>
+        <td><%= link_to 'Edit', edit_event_comment_path(event_comment) %></td>
+        <td><%= link_to 'Destroy', event_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event comment', new_event_comment_path %>

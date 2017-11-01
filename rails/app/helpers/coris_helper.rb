@@ -1,0 +1,2 @@
+module CorisHelper
+end
