@@ -8,17 +8,7 @@
 
 
 Event.destroy_all
-Event.create(kind: "COCKTAILS", title: "James Bond Summer Ball", time: "2017-06-23T20:00:00.000Z", host_id: 1)
-Event.create(kind: "BEERS", title: "big mals leaving driks", time: "tomorrow at noon", host_id: 1)
-
-Event.create(kind: "MILKSHAKES", title: "big mals leaving driks", time: "tomorrow at noon", host_id: 1)
-
-Event.create(kind: "COFFEES", title: "big mals leaving driks", time: "tomorrow at noon", host_id: 1)
-
-Event.create(kind: "COFFEES", title: "big mals leaving driks", time: "tomorrow at noon", host_id: 1)
-
-Event.create(kind: "BEERS", title: "big mals leaving driks", time: "tomorrow at noon", host_id: 1)
-Event.create(kind: "COCKTAILS", title: "grantham steve", time: "tomorrow at nooagfn", host_id: 2)
+Event.create(kind: "COCKTAILS", title: "James Bond Summer Ball", time: "2017-06-23T20:00:00.000Z", host_id: User.find_by(name:"Phil Hardy").id)
 
 User.destroy_all
 User.create(name:"Phil Hardy",avatarUrl:"https://graph.facebook.com/10154445192311988/picture?type=normal")
