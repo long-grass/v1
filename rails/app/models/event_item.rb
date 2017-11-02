@@ -1,2 +1,0 @@
-class EventItem < ApplicationRecord
-end

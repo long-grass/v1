@@ -1,2 +1,0 @@
-<li><%= assigned_item.item_name %>: <%= assigned_item.assigned_person.full_name %></li>
-<%= link_to "Remove", event_item_unassign_path(@event, assigned_item), method: :put if assigned_item.assigned_person == current_user || @event.host == current_user %></li>
