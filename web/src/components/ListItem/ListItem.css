@@ -45,3 +45,11 @@
     text-overflow: ellipsis;
     font: 1.063rem/1.25 "Lucida Console",Monaco,monospace
 }
+
+.imageContainer{
+    height:40px
+}
+
+.imageContainer img{
+    height:100%
+}

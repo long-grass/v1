@@ -4,7 +4,7 @@ import moment from 'moment';
 
 const classNames = require('classnames');
 
-import './SectionOne.css'
+import styles from './SectionOne.css'
 
 const SectionOne = ({event}) => {
  console.log(event)

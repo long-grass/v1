@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { closeEvent } from '../../actions/event'
 import MdHighlightOff from 'react-icons/lib/md/highlight-off';
-
+import styles from './SectionOne.css'
 
 
 class CloseIt extends React.Component {
@@ -23,7 +23,7 @@ class CloseIt extends React.Component {
 
   render() {       
     return (
-      <Link to="/" id="close-it" className="event-info--close js-close-sidebar" onClick={this.closeThis}>
+      <Link to="/" id="close-it" className={styles.closeIt} onClick={this.closeThis}>
         <MdHighlightOff size={40} />
       </Link>
     );

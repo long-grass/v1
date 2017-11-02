@@ -17,8 +17,8 @@ export const EventShow = ({event,history}) => {
   const rightHand =  classNames(openState, event.eventColourScheme);
   return (
     <div className={rightHand}>
-      <Title title={event.title}> </Title>
       <CloseIt history={history} event={event}/>
+      <Title title={event.title}> </Title>
       <SectionOne event={event}/>
     </div>
   )

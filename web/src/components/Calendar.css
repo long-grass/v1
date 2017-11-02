@@ -18,6 +18,14 @@
     line-height: 1;
 }
 
+.drinksTextContainer {
+    height:60px
+}
+
+.drinksTextContainer img{
+    height:100%
+}
+
 @media screen and (max-width: 900px){
     .leftHandSide {
         width: 100%;  
