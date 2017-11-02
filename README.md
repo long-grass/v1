@@ -25,11 +25,13 @@ Installs packages and builds the 3 containers
 make start
 ```
 
+Stars up the application on port 3108 
+
 ```
 make stop
 ```
 
-Stars up the application on port 3108 
+Stops the application and stops any linked containers
 
 ## Explanation
 
@@ -39,11 +41,24 @@ Stars up the application on port 3108
 * No CORS configuration needed, handled by nginx
 * All appropriate commands in Makefile
 
+## TROUBLESHOOTING
+
+* 502 Bad Gateway
+
+This may happen if you have gone to the browser before the rails app has finished building. nginx is ready but rails isn't. Once application is running this sohuld no longer occur.
+
+* Menu Slides in with no content.
+
+This will be an issue with the seeds, if any kind of build command has been run twice or not shut down cleanly. For time being this is fixed by running 'make reset'
+
+* Anything missing is because its not done yet!
+
 ## TODO
 
-* [ ] Search/Paginate
-* [ ] Display Comments/Guests
-* [ ] Map
+* [ ] Search/Paginate (done in rails but not in react)
+* [ ] Display Comments/Guests (appears in front end but ui not done for it yet)
+* [ ] Map 
 * [ ] Deployment 
 * [ ] Documentation
+* [ ] Caching (Redis is in the app but not yet utilized
 
