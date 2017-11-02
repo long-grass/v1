@@ -11,20 +11,12 @@ reset:
 clean:
 	ls rails/tmp/pids/server.pid
 
-york:
-	./bin/york/deploy.sh
-
 bundle:
-	cd client && npm run build
+	cd web  && npm run build
 
 build:
 	docker-compose build && docker-compose up 
 
-deploy-do:
+deploy:
 	./bin/digital_ocean/deploy.sh
 
-deploy-aws:
-	./bin/aws/deploy.sh
-
-deploy-exo:
-	./bin/exo/deploy.sh
