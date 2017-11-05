@@ -37128,3 +37128,423 @@ DEPRECATION WARNING: You attempted to assign a value which is not explicitly `tr
   [1m[35m (0.4ms)[0m  BEGIN
   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["event_id", 7], ["attending", "f"], ["created_at", "2017-11-02 12:06:57.387398"], ["updated_at", "2017-11-02 12:06:57.387398"]]
   [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (28.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'event_comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'event_locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'events'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'guests'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (22.9ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 1]]
+  [1m[36m (150.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (16.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 3]]
+  [1m[36m (28.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (21.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "users" ("name", "avatarUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Phil Hardy"], ["avatarUrl", "https://graph.facebook.com/10154445192311988/picture?type=normal"], ["created_at", "2017-11-05 10:28:17.772612"], ["updated_at", "2017-11-05 10:28:17.772612"]]
+  [1m[36m (17.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "avatarUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Roger Planes"], ["avatarUrl", "https://graph.facebook.com/10153470472875756/picture?type=normal"], ["created_at", "2017-11-05 10:28:17.799780"], ["updated_at", "2017-11-05 10:28:17.799780"]]
+  [1m[35m (33.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "avatarUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Mark Hartley"], ["avatarUrl", "https://graph.facebook.com/10207459310094409/picture?type=normal"], ["created_at", "2017-11-05 10:28:17.838440"], ["updated_at", "2017-11-05 10:28:17.838440"]]
+  [1m[36m (21.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "avatarUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fie Jelved"], ["avatarUrl", "https://graph.facebook.com/10153981598127950/picture?type=normal"], ["created_at", "2017-11-05 10:28:17.865206"], ["updated_at", "2017-11-05 10:28:17.865206"]]
+  [1m[35m (17.2ms)[0m  COMMIT
+  [1m[36mEvent Load (6.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 1]]
+  [1m[35m (24.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 2]]
+  [1m[36m (19.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 3]]
+  [1m[35m (31.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 4]]
+  [1m[36m (16.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 5]]
+  [1m[35m (20.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 6]]
+  [1m[36m (16.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 7]]
+  [1m[35m (16.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Phil Hardy"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (10.3ms)[0m  [1mINSERT INTO "events" ("kind", "title", "time", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "COCKTAILS"], ["title", "James Bond Summer Ball"], ["time", "2017-06-23T20:00:00.000Z"], ["host_id", 5], ["created_at", "2017-11-05 10:28:18.229714"], ["updated_at", "2017-11-05 10:28:18.229714"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Mark Hartley"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("kind", "time", "title", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "COCKTAILS"], ["time", "2017-12-23T20:00:00.000Z"], ["title", "James Bond Winter Ball"], ["host_id", 7], ["created_at", "2017-11-05 10:28:18.261915"], ["updated_at", "2017-11-05 10:28:18.261915"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Mark Hartley"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "events" ("kind", "time", "title", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "BEERS"], ["time", "2017-06-23T18:00:00.000Z"], ["title", "Silicon Drinkabout"], ["host_id", 7], ["created_at", "2017-11-05 10:28:18.283409"], ["updated_at", "2017-11-05 10:28:18.283409"]]
+  [1m[35m (30.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Mark Hartley"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "events" ("kind", "time", "title", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "BEERS"], ["time", "2017-07-28T18:00:00.000Z"], ["title", "Silicon Drinkabout"], ["host_id", 7], ["created_at", "2017-11-05 10:28:18.321895"], ["updated_at", "2017-11-05 10:28:18.321895"]]
+  [1m[35m (29.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Roger Planes"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("kind", "time", "title", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "BEERS"], ["time", "2017-02-24T17:00:00.000Z"], ["title", "Silicon Rhino Office Warming"], ["host_id", 6], ["created_at", "2017-11-05 10:28:18.357773"], ["updated_at", "2017-11-05 10:28:18.357773"]]
+  [1m[35m (31.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Phil Hardy"]]
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "events" ("kind", "time", "title", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "COFFEES"], ["time", "2017-08-21T13:00:00.000Z"], ["title", "Javascript Meetup"], ["host_id", 5], ["created_at", "2017-11-05 10:28:18.397496"], ["updated_at", "2017-11-05 10:28:18.397496"]]
+  [1m[35m (27.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "Mark Hartley"]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "events" ("kind", "time", "title", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["kind", "MILKSHAKES"], ["time", "2017-08-19T16:30:00.000Z"], ["title", "Outdoor Cinema"], ["host_id", 7], ["created_at", "2017-11-05 10:28:18.433458"], ["updated_at", "2017-11-05 10:28:18.433458"]]
+  [1m[35m (29.0ms)[0m  COMMIT
+  [1m[36mEventComment Load (14.8ms)[0m  [1mSELECT "event_comments".* FROM "event_comments"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "event_comments" WHERE "event_comments"."id" = $1[0m  [["id", 1]]
+  [1m[35m (24.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "event_comments" WHERE "event_comments"."id" = $1  [["id", 2]]
+  [1m[36m (21.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "event_comments" WHERE "event_comments"."id" = $1[0m  [["id", 3]]
+  [1m[35m (16.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "event_comments" WHERE "event_comments"."id" = $1  [["id", 4]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "event_comments" WHERE "event_comments"."id" = $1[0m  [["id", 5]]
+  [1m[35m (46.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "event_comments" WHERE "event_comments"."id" = $1  [["id", 6]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "event_comments" WHERE "event_comments"."id" = $1[0m  [["id", 7]]
+  [1m[35m (16.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 1], ["event_id", 1], ["timestamp", "2017-06-20T15:21:21.000Z"], ["message", "Looking forward to this!"], ["created_at", "2017-11-05 10:28:18.686560"], ["updated_at", "2017-11-05 10:28:18.686560"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["event_id", 1], ["timestamp", "2017-06-23T18:53:45.000Z"], ["message", "Not long to go now :)"], ["created_at", "2017-11-05 10:28:18.709343"], ["updated_at", "2017-11-05 10:28:18.709343"]]
+  [1m[35m (23.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 1], ["event_id", 1], ["timestamp", "2017-06-24T13:31:01.000Z"], ["message", "Thanks for coming everyone"], ["created_at", "2017-11-05 10:28:18.737158"], ["updated_at", "2017-11-05 10:28:18.737158"]]
+  [1m[36m (46.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["event_id", 2], ["timestamp", "2017-06-24T14:32:27.000Z"], ["message", "Can you send details about the dress code?"], ["created_at", "2017-11-05 10:28:18.788183"], ["updated_at", "2017-11-05 10:28:18.788183"]]
+  [1m[35m (31.6ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 2], ["event_id", 3], ["timestamp", "2017-06-20T17:31:17.000Z"], ["message", "Sorry, I can't make this one"], ["created_at", "2017-11-05 10:28:18.825860"], ["updated_at", "2017-11-05 10:28:18.825860"]]
+  [1m[36m (34.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 3], ["event_id", 4], ["timestamp", "2017-06-18T18:34:12.000Z"], ["message", "I'll be there"], ["created_at", "2017-11-05 10:28:18.868665"], ["updated_at", "2017-11-05 10:28:18.868665"]]
+  [1m[35m (29.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "event_comments" ("user_id", "event_id", "timestamp", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 4], ["event_id", 4], ["timestamp", "2017-06-18T18:40:52.000Z"], ["message", "Me too"], ["created_at", "2017-11-05 10:28:18.904433"], ["updated_at", "2017-11-05 10:28:18.904433"]]
+  [1m[36m (30.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mLocation Load (17.3ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = $1  [["id", 1]]
+  [1m[36m (18.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 2]]
+  [1m[35m (32.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = $1  [["id", 3]]
+  [1m[36m (31.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 4]]
+  [1m[35m (32.5ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = $1  [["id", 5]]
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 6]]
+  [1m[35m (32.0ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (18.0ms)[0m  INSERT INTO "locations" ("name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Radisson Blu Hotel"], ["latitude", 51.517608], ["longitude", -0.127625], ["created_at", "2017-11-05 10:28:19.206228"], ["updated_at", "2017-11-05 10:28:19.206228"]]
+  [1m[36m (17.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "locations" ("name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Duke of York"], ["latitude", 51.499211], ["longitude", -0.09947], ["created_at", "2017-11-05 10:28:19.247950"], ["updated_at", "2017-11-05 10:28:19.247950"]]
+  [1m[35m (30.7ms)[0m  COMMIT
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "locations" ("name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Old Thameside Inn"], ["latitude", 51.507013], ["longitude", -0.09061], ["created_at", "2017-11-05 10:28:19.287414"], ["updated_at", "2017-11-05 10:28:19.287414"]]
+  [1m[36m (27.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "locations" ("name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Silicon Rhino London"], ["latitude", 51.498511], ["longitude", -0.104288], ["created_at", "2017-11-05 10:28:19.321485"], ["updated_at", "2017-11-05 10:28:19.321485"]]
+  [1m[35m (31.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "locations" ("name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Pret A Manger, Elephant & Castle"], ["latitude", 51.49354], ["longitude", -0.101082], ["created_at", "2017-11-05 10:28:19.358944"], ["updated_at", "2017-11-05 10:28:19.358944"]]
+  [1m[36m (30.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "locations" ("name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chiswick House & Gardens"], ["latitude", 51.482478], ["longitude", -0.25924], ["created_at", "2017-11-05 10:28:19.396154"], ["updated_at", "2017-11-05 10:28:19.396154"]]
+  [1m[35m (30.2ms)[0m  COMMIT
+  [1m[36mEventLocation Load (15.8ms)[0m  [1mSELECT "event_locations".* FROM "event_locations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "event_locations" WHERE "event_locations"."id" = $1[0m  [["id", 1]]
+  [1m[35m (32.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "event_locations" WHERE "event_locations"."id" = $1  [["id", 2]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "event_locations" WHERE "event_locations"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "event_locations" WHERE "event_locations"."id" = $1  [["id", 4]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "event_locations" WHERE "event_locations"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "event_locations" WHERE "event_locations"."id" = $1  [["id", 6]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "event_locations" WHERE "event_locations"."id" = $1[0m  [["id", 7]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["event_id", 1], ["location_id", 1], ["created_at", "2017-11-05 10:28:19.548558"], ["updated_at", "2017-11-05 10:28:19.548558"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 2], ["location_id", 1], ["created_at", "2017-11-05 10:28:19.558162"], ["updated_at", "2017-11-05 10:28:19.558162"]]
+  [1m[35m (60.5ms)[0m  COMMIT
+  [1m[36m (1.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["event_id", 3], ["location_id", 2], ["created_at", "2017-11-05 10:28:19.625072"], ["updated_at", "2017-11-05 10:28:19.625072"]]
+  [1m[36m (19.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 4], ["location_id", 3], ["created_at", "2017-11-05 10:28:19.650055"], ["updated_at", "2017-11-05 10:28:19.650055"]]
+  [1m[35m (16.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["event_id", 5], ["location_id", 4], ["created_at", "2017-11-05 10:28:19.671031"], ["updated_at", "2017-11-05 10:28:19.671031"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 6], ["location_id", 5], ["created_at", "2017-11-05 10:28:19.691600"], ["updated_at", "2017-11-05 10:28:19.691600"]]
+  [1m[35m (16.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "event_locations" ("event_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["event_id", 7], ["location_id", 6], ["created_at", "2017-11-05 10:28:19.713464"], ["updated_at", "2017-11-05 10:28:19.713464"]]
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mGuest Load (43.9ms)[0m  SELECT "guests".* FROM "guests"
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 1]]
+  [1m[36m (20.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 2]]
+  [1m[35m (52.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 3]]
+  [1m[36m (16.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 4]]
+  [1m[35m (27.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 5]]
+  [1m[36m (16.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 6]]
+  [1m[35m (17.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 7]]
+  [1m[36m (21.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 8]]
+  [1m[35m (16.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 9]]
+  [1m[36m (21.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 10]]
+  [1m[35m (17.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 11]]
+  [1m[36m (17.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 12]]
+  [1m[35m (24.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 13]]
+  [1m[36m (32.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 14]]
+  [1m[35m (19.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "guests" WHERE "guests"."id" = $1  [["id", 15]]
+  [1m[36m (29.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 16]]
+  [1m[35m (41.4ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:101)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.9ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["event_id", 1], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.276582"], ["updated_at", "2017-11-05 10:28:20.276582"]]
+  [1m[36m (47.4ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:102)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["event_id", 1], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.342145"], ["updated_at", "2017-11-05 10:28:20.342145"]]
+  [1m[35m (35.2ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:103)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 2], ["event_id", 1], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.385252"], ["updated_at", "2017-11-05 10:28:20.385252"]]
+  [1m[36m (29.1ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:105)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["event_id", 2], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.422519"], ["updated_at", "2017-11-05 10:28:20.422519"]]
+  [1m[35m (30.1ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:106)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["event_id", 2], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.460713"], ["updated_at", "2017-11-05 10:28:20.460713"]]
+  [1m[36m (28.7ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:107)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["event_id", 2], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.497736"], ["updated_at", "2017-11-05 10:28:20.497736"]]
+  [1m[35m (29.1ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:109)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["event_id", 4], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.533367"], ["updated_at", "2017-11-05 10:28:20.533367"]]
+  [1m[36m (42.0ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:110)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["event_id", 4], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.580547"], ["updated_at", "2017-11-05 10:28:20.580547"]]
+  [1m[35m (16.4ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:111)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["event_id", 4], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.604110"], ["updated_at", "2017-11-05 10:28:20.604110"]]
+  [1m[36m (28.6ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:112)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["event_id", 4], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.638959"], ["updated_at", "2017-11-05 10:28:20.638959"]]
+  [1m[35m (21.9ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:114)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["event_id", 5], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.666514"], ["updated_at", "2017-11-05 10:28:20.666514"]]
+  [1m[36m (24.2ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:115)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["event_id", 5], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.695934"], ["updated_at", "2017-11-05 10:28:20.695934"]]
+  [1m[35m (16.5ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:116)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["event_id", 5], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.717728"], ["updated_at", "2017-11-05 10:28:20.717728"]]
+  [1m[36m (18.9ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:117)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["event_id", 5], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.741440"], ["updated_at", "2017-11-05 10:28:20.741440"]]
+  [1m[35m (30.2ms)[0m  COMMIT
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:119)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 4], ["event_id", 6], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.777208"], ["updated_at", "2017-11-05 10:28:20.777208"]]
+  [1m[36m (18.9ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from <top (required)> at /usr/src/app/db/seeds.rb:121)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "guests" ("user_id", "event_id", "attending", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["event_id", 7], ["attending", "f"], ["created_at", "2017-11-05 10:28:20.801314"], ["updated_at", "2017-11-05 10:28:20.801314"]]
+  [1m[35m (31.3ms)[0m  COMMIT
+
+
+Started GET "/" for 172.24.0.1 at 2017-11-05 14:02:37 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/bundle/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (10.9ms)
+Completed 200 OK in 70ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parties" for 172.24.0.1 at 2017-11-05 14:02:44 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (15.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (6.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 200 OK in 301ms (Views: 0.2ms | ActiveRecord: 49.9ms)
